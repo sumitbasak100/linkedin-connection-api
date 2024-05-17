@@ -4,11 +4,15 @@ const app = express();
 // const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require("./routes/auth");
+const cors = require("cors"); // Import cors middleware
 
 
 
 // dotenv.config(); 
 app.use(express.json());
+
+app.use(cors());
+
 
 
 mongoose
